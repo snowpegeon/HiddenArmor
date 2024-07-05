@@ -51,11 +51,11 @@ public class ArmorPacketHandler {
                 packetSelf.getIntegers().write(1,i);
             ItemStack armor = ProtocolUtil.getArmor(ProtocolUtil.ArmorType.getType(i), inv);
             packetSelf.getItemModifier().write(0, armor);
-            try {
+//            try {
                 protocolManager.sendServerPacket(player, packetSelf);
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
-            }
+//            } catch (InvocationTargetException e) {
+//                e.printStackTrace();
+//            }
         }
     }
 
